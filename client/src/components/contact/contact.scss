@@ -52,7 +52,7 @@
 
 
     .phoneSvg {
-      stroke: orange;
+      stroke: rgb(178, 19, 223);
       position: absolute;
       margin: auto;
       z-index: -1;
@@ -79,7 +79,7 @@
       button {
         padding: 20px;
         border: none;
-        background-color: orange;
+        background-color: rgb(178, 19, 223);
         cursor: pointer;
         font-weight: 500;
         @include mobile {
