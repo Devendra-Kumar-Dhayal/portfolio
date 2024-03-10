@@ -1,3 +1,4 @@
+
 import Test from "./Test";
 import "./app.scss";
 import Contact from "./components/contact/Contact";
@@ -7,7 +8,7 @@ import Navbar from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/Parallax";
 import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/services/Services";
-
+import GitHubScraper from "./components/gitHubScrapper/GitHubScrapper.jsx";
 const App = () => {
   return (
     <div>
@@ -28,6 +29,9 @@ const App = () => {
       <Portfolio />
       <section id="Contact">
         <Contact />
+      </section>
+      <section >
+        <GitHubScraper />
       </section>
       {/* Framer Motion Crash Course */}
       {/* <Test/>
