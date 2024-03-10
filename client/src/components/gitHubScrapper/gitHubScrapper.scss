@@ -3,7 +3,7 @@
 
    
       h1 {
-        font-size: 88px;
+        font-size: 30px;
         text-align: center;
         align-self: center;
         @include mobile {
@@ -12,22 +12,29 @@
        
       }
       div {
+        .readme-container {
+          max-height: 30px;
+          overflow: auto;
+          max-width: 900px;
+        }
         h2{
-            font-size: 40px;
+            font-size: 20px;
             text-align: center;
             align-self: center;
             @include mobile {
             font-size: 36px;
         }
+        
         }
       }
       p {
         text-align: center;
-        font-size: 70px;
+        font-size: 10px;
         @include mobile {
             font-size: 36px;
           }
         }
+        
 
     }
   

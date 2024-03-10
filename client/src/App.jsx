@@ -30,13 +30,16 @@ const App = () => {
       <section id="Contact">
         <Contact />
       </section>
-      <section >
+      <div className="testing">
         <GitHubScraper />
-      </section>
+      </div>
+      
       {/* Framer Motion Crash Course */}
       {/* <Test/>
     <Test/> */}
+    
     </div>
+
   );
 };
 
