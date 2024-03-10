@@ -30,16 +30,11 @@ const App = () => {
       <section id="Contact">
         <Contact />
       </section>
-      <div className="testing">
-        <GitHubScraper />
-      </div>
       
       {/* Framer Motion Crash Course */}
       {/* <Test/>
     <Test/> */}
-    
     </div>
-
   );
 };
 

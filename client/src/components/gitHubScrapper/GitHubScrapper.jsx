@@ -71,25 +71,27 @@ const GitHubScraper = () => {
     fetchRepos();
   }, []);
 
-  return (
-    <div className='wrapper'>
-      <h1>GitHub Repositories</h1>
-      {error && <p>{error}</p>}
-      {repos.map(repo => (
-        <div key={repo.id}>
-          <h2>{repo.name}</h2>
-          <p>URL: {repo.html_url}</p>
-          <h3>README</h3>
-          <div className='readme-container'>
-          <pre >{repo.readme}</pre>
-          </div>
-          
-          <hr />
-        </div>
-      ))}
-    </div>
-    );
+
+    return {repos,error};
   };
 
   export default GitHubScraper;
 // ----------------------------
+  // return (
+  //   <div className='wrapper'>
+  //     <h1>GitHub Repositories</h1>
+  //     {error && <p>{error}</p>}
+  //     {repos.map(repo => (
+  //       <div key={repo.id}>
+  //         <h2>{repo.name}</h2>
+  //         <p>URL: {repo.html_url}</p>
+  //         <h3>README</h3>
+  //         <div className='readme-container'>
+  //         <pre >{repo.readme}</pre>
+  //         </div>
+          
+  //         <hr />
+  //       </div>
+  //     ))}
+  //   </div>
+  //   );
