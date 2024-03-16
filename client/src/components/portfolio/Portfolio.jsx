@@ -3,6 +3,8 @@ import "./portfolio.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import GitHubScraper from "../gitHubScrapper/GitHubScrapper";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import rehypeIgnore from "rehype-ignore";
 
 const Single = ({ item }) => {
   const ref = useRef();
@@ -26,7 +28,9 @@ const Single = ({ item }) => {
             </a>
             {item.readme && (
               <div className="readme">
-              <ReactMarkdown>{item.readme}</ReactMarkdown>
+              <ReactMarkdown rehypePlugins={[rehypeRaw, [rehypeIgnore, { test: "img" }]]}>
+                {item.readme}
+              </ReactMarkdown>
             </div>
             )}
           </motion.div>

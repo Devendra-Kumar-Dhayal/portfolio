@@ -15,9 +15,6 @@ const GitHubScraper = () => {
         const username = import.meta.env.VITE_GITHUB_USERNAME;
         const accessToken = import.meta.env.VITE_GITHUB_SECRET_KEY;
         
-        
-     
-
         // GitHub API endpoint for retrieving user repositories
         const url = `https://api.github.com/users/${username}/repos`;
 
