@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState,useEffect } from "react";
 import "./portfolio.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import GitHubScraper from "../gitHubScrapper/GitHubScrapper";
@@ -12,13 +12,35 @@ const Single = ({ item }) => {
     target: ref,
   });
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    const extractImages = (content) => {
+      const imgRegex = /!\[.*?\]\((.*?)\)/g;
+      const extractedImages = [];
+      let match;
+      while ((match = imgRegex.exec(content))) {
+        extractedImages.push(match[1]);
+      }
+      setImages(extractedImages);
+    };
+
+    if (item.readme) {
+      extractImages(item.readme);
+    }
+  }, [item.readme]);
+
 
   return (
     <section>
       <div className="container">
         <div className="wrapper">
           <div className="imageContainer" ref={ref}>
-            <img src={item.owner.avatar_url} alt="" />
+            {images.length > 0 ? (
+              <img src={images[0]} alt="" />
+            ) : (
+              <img src={item.owner.avatar_url} alt="" />
+            )}
           </div>
           <motion.div className="textContainer" style={{ y }}>
             <h2>{item.name}</h2>
@@ -28,10 +50,12 @@ const Single = ({ item }) => {
             </a>
             {item.readme && (
               <div className="readme">
-              <ReactMarkdown rehypePlugins={[rehypeRaw, [rehypeIgnore, { test: "img" }]]}>
-                {item.readme}
-              </ReactMarkdown>
-            </div>
+                <ReactMarkdown
+                  rehypePlugins={[rehypeRaw, [rehypeIgnore, { test: "img" }]]}
+                >
+                  {item.readme}
+                </ReactMarkdown>
+              </div>
             )}
           </motion.div>
         </div>
