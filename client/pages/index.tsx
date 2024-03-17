@@ -21,7 +21,7 @@ type Props = {
 
 export const meta = {
   description:
-    "Devendra  is a full-stack developer based in Yangon, Myanmar. He is passionate about writing codes and developing web applications to solve real-life challenges.",
+    "Devendra is a Software Engineer. He is passionate about writing codes and developing applications to solve real-life challenges.",
   author: "Devendra ",
   type: "website",
   ogImage: `${process.env.NEXT_PUBLIC_URL}/devendra-dev-og-new.png`,

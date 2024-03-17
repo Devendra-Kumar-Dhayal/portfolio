@@ -55,7 +55,7 @@ const ProjectSection: React.FC = () => {
       <div className="others text-center mb-16">
         Other projects can be explored in{" "}
         <a
-          href="https://github.com/satnaing"
+          href="https://github.com/devendra-kumar-dhayal/"
           className="font-medium underline link-outline text-marrsgreen dark:text-carrigreen whitespace-nowrap"
         >
           my github profile
