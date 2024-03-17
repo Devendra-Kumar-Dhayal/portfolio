@@ -27,7 +27,7 @@ export interface MdxMeta extends Meta {
   coverImageWidth?: string;
   coverImageHeight?: string;
   featured: boolean;
-  language: "English" | "Myanmar";
+  language: "English" ;
 }
 
 type Props = {
