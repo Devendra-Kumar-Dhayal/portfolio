@@ -11,7 +11,8 @@ import useScrollActive from "hooks/useScrollActive";
 import terminalPortfolio from "public/projects/terminal-portfolio.webp";
 import haruFashion from "public/projects/haru-fashion.webp";
 import haruApi from "public/projects/haru-api.webp";
-import astroPaper from "public/projects/astro-paper.webp";
+import astroPaper from "public/designStudio.png";
+import crackWatch from "public/crackwatch.jpeg"
 import nextBookstore from "public/projects/next-bookstore.webp";
 import shadcnAdmin from "public/projects/shadcn-admin.webp";
 
@@ -67,8 +68,8 @@ const ProjectSection: React.FC = () => {
 
 const projects = [
   {
-    title: "AstroPaper",
-    type: "Frontend",
+    title: "Design Studio",
+    type: "End to End",
     image: (
       <Image
         src={astroPaper}
@@ -78,34 +79,34 @@ const projects = [
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "A minimal, accessible and SEO-friendly Astro blog theme. One of the most starred blog templates built with Astro.",
-    tags: ["Astro", "TypeScript", "React", "TailwindCSS"],
+    desc: "Web-based editor to model the individual data flows between applications. Team of applications collaborating to make a business function smoothly.",
+    tags: ["React", "TypeScript", "NodeJs", "TailwindCSS", "MongoDB","ZOD"],
     liveUrl: "",
-    codeUrl: "https://github.com/devendra-kumar-dhayal/astro-paper",
+    codeUrl: "https://github.com/Devendra-Kumar-Dhayal/designStudio",
     bgColor: "bg-[#9FD0E3]",
-    githubApi: "https://api.github.com/repos/devendra-kumar-dhayal/astro-paper",
+    githubApi: "https://github.com/Devendra-Kumar-Dhayal/designStudio",
   },
-  
-  
   {
-    title: "Next Bookstore",
-    type: "Frontend + HeadlessCMS",
+    title: "Social Media Application",
+    type: "End to End",
     image: (
       <Image
-        src={nextBookstore}
+        src={crackWatch}
         sizes="100vw"
         fill
-        alt="Next Bookstore"
+        alt="AstroPaper"
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "An online bookstore developed using NextJS 13 with appDir and StrapiCMS.",
-    tags: ["NextJS", "Radix UI ", "TailwindCSS", "TanstackQuery", "StrapiCMS"],
+    desc: "Platform to discuss Games Information, strategies, and Statuses.",
+    tags: ["Html", "JavaScript", "Django", "TailwindCSS", "PostgreSQL"],
     liveUrl: "",
-    codeUrl: "https://github.com/devendra-kumar-dhayal/next-bookstore",
-    bgColor: "bg-[#EBF4F4]",
-    githubApi: "https://api.github.com/repos/devendra-kumar-dhayal/next-bookstore",
+    codeUrl: "https://github.com/Devendra-Kumar-Dhayal/homeMainBranch",
+    bgColor: "bg-[#9FD0E3]",
+    githubApi: "https://github.com/Devendra-Kumar-Dhayal/homeMainBranch",
   },
+  
+  
   
 ];
 

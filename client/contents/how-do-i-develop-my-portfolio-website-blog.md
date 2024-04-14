@@ -9,7 +9,7 @@ tags:
   - Blog
 author: Devendra
 type: article
-coverImage: https://res.cloudinary.com/noezectz/image/upload/v1653050141/devendradhayal/blog_at_cafe_ei1wf4.jpg
+coverImage: https://res.cloudinary.com/noezectz/image/upload/v1653050141/satnaing/blog_at_cafe_ei1wf4.jpg
 coverImageAlt: Macbook at a cafe
 title: How Do I Develop My Portfolio Website & Blog
 description:
