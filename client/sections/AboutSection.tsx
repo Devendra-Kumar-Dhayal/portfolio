@@ -104,14 +104,13 @@ const AboutSection: React.FC = () => {
       ref={sectionRef}
       className="about-panel bg-white dark:bg-[#1B2731] relative"
     >
-      <section id="whoami" className="section">
+      <section id="whoami" className="section ">
         <RoughNotationGroup>
           <div className="text-center">
             <RoughNotation
               type="underline"
-              color={`${
-                theme === "light" ? "rgb(0, 122, 122)" : "rgb(5 206 145)"
-              }`}
+              color={`${theme === "light" ? "rgb(0, 122, 122)" : "rgb(5 206 145)"
+                }`}
               strokeWidth={2}
               order={1}
               show={isSecOnScreen}
@@ -119,8 +118,8 @@ const AboutSection: React.FC = () => {
               <h2 className="section-heading">Who am I?</h2>
             </RoughNotation>
           </div>
-          <div className="md:grid grid-rows-5 lg:grid-rows-6 grid-cols-5">
-            <div className="col-start-1 col-end-3 row-start-1 row-end-4 lg:row-end-7 lg:col-start-1 lg:col-end-3 flex justify-center items-center py-4 lg:mb-[20%]">
+          <div className="flex flex-col md:flex-row gap-4 lg:gap-16">
+            <div className="flex justify-center items-center py-6 ">
               <div className="relative w-72">
                 <svg
                   width="96"
@@ -168,20 +167,24 @@ const AboutSection: React.FC = () => {
               </div>
             </div>
 
-            <p className="col-start-1 col-end-3 row-start-4 row-end-6 lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-6 lg:ml-8 lg:mt-auto about-intro">
-              I am reasearcher, student and developer. I am really passionate about learning new things and exploring world. I am currently 
-              pursuing my B.Tech. 
-            </p>
+            <div className="flex flex-col  gap-4 justify-center">
 
-            <div
-              className="col-start-3 col-end-6 row-start-1 row-end-6 lg:row-start-2 lg:row-end-7 md:ml-8 place-content-end"
-              ref={eduRef}
-            >
-              <p className="edu-bg my-4">Here is my educational background.</p>
-              {educationInfo.map((edu) => (
-                <EduGroup edu={edu} key={edu.id} />
-              ))}
+              <p className="about-intro">
+                I am reasearcher, student and developer. I am really passionate about learning new things and exploring world. I am currently
+                pursuing my B.Tech.
+              </p>
+
+              <div
+                className="place-content-end"
+                ref={eduRef}
+              >
+                <p className="edu-bg my-4">Here is my educational background.</p>
+                {educationInfo.map((edu) => (
+                  <EduGroup edu={edu} key={edu.id} />
+                ))}
+              </div>
             </div>
+
           </div>
         </RoughNotationGroup>
       </section>
