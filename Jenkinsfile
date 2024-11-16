@@ -7,7 +7,7 @@ pipeline {
         CONTAINER_NAME = 'portfolio-jenkins' // Name of the container
         PORT = '3000' // Port to be used
 
-        SONAR_TOKEN = 6d46e3c0d8aebb627fa86b96e3938798529dab70
+        SONAR_TOKEN = '6d46e3c0d8aebb627fa86b96e3938798529dab70'
         SONAR_PROJECT_KEY = 'Devendra-Kumar-Dhayal_portfolio' // SonarCloud project key
         SONAR_PROJECT_NAME = 'portfolio' // SonarCloud project name
         SONAR_ORG = 'Devendra-Kumar-Dhayal' // SonarCloud organization
