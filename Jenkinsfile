@@ -80,7 +80,7 @@ pipeline {
                     // Run SonarCloud analysis using SonarScanner
                     withSonarQubeEnv('SonarCloud') {
                         sh """
-                            mvn sonar:sonar \
+                            sonar:sonar \
                             -Dsonar.projectKey=${SONAR_PROJECT_KEY} \
                             -Dsonar.organization=${SONAR_ORG} \
                             -Dsonar.host.url=https://sonarcloud.io \
