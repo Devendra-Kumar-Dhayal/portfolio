@@ -5,7 +5,7 @@ pipeline {
         DOCKER_IMAGE_NAME = 'portfolio-v4' // Image name
         DOCKERFILE_PATH = '.' // Path to the Dockerfile (modify if needed)
         CONTAINER_NAME = 'portfolio-jenkins' // Name of the container
-        PORT = '3001' // Port to be used
+        PORT = '3000' // Port to be used
     }
 
     stages {
