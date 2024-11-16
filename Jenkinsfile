@@ -37,6 +37,12 @@ pipeline {
             }
         }
 
+        stage('Build init ') {
+            steps {
+                sh 'mvn clean install -DskipTests'
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 script {
@@ -81,14 +87,14 @@ pipeline {
             }
         }
 
-        // stage('Quality Gate') {
-        //     steps {
-        //         script {
-        //             // Wait for the quality gate result from SonarCloud
-        //             waitForQualityGate abortBuild: true
-        //         }
-        //     }
-        // }
+        stage('Quality Gate') {
+            steps {
+                script {
+                    // Wait for the quality gate result from SonarCloud
+                    waitForQualityGate abortBuild: true
+                }
+            }
+        }
     }
 
     post {
