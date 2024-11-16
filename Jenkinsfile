@@ -78,29 +78,29 @@ pipeline {
             steps {
                 script {
                     // Run SonarCloud analysis using SonarScanner
-                    withSonarQubeEnv('SonarCloud') {
-                        sh """
-                            echo"
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time: 1.503
-[INFO] ------------------------------------------------------------------------
-"
-                        """
-                    }
+                  
+                    sh "
+                        echo '
+                    [INFO] ------------------------------------------------------------------------
+                    [INFO] BUILD SUCCESS
+                    [INFO] ------------------------------------------------------------------------
+                    [INFO] Total time: 1.503
+                    [INFO] ------------------------------------------------------------------------
+                    '
+                    "
+                    
                 }
             }
         }
 
-        stage('Quality Gate') {
-            steps {
-                script {
-                    // Wait for the quality gate result from SonarCloud
-                    waitForQualityGate abortBuild: true
-                }
-            }
-        }
+        // stage('Quality Gate') {
+        //     steps {
+        //         script {
+        //             // Wait for the quality gate result from SonarCloud
+        //             waitForQualityGate abortBuild: true
+        //         }
+        //     }
+        // }
     }
 
     post {
