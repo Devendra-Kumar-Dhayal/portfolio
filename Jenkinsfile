@@ -41,11 +41,11 @@ pipeline {
             }
         }
 
-        stage('Build init ') {
-            steps {
-                sh 'mvn clean install -DskipTests'
-            }
-        }
+        // stage('Build init ') {
+        //     steps {
+        //         sh 'mvn clean install -DskipTests'
+        //     }
+        // }
 
         stage('Build Docker Image') {
             steps {
