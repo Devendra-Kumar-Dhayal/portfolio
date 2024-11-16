@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven 3.8.4' // Reference the Maven version name here
+    }
+
     environment {
         DOCKER_IMAGE_NAME = 'portfolio-v4' // Image name
         DOCKERFILE_PATH = '.' // Path to the Dockerfile (modify if needed)
