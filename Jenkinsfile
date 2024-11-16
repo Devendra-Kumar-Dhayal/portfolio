@@ -10,7 +10,7 @@ pipeline {
         stage('Git Clone') {
             steps {
                 // Clone the Git repository
-                git 'https://github.com/Devendra-Kumar-Dhayal/portfolio.git'
+                git branch: 'main', url: 'https://github.com/Devendra-Kumar-Dhayal/portfolio.git'
             }
         }
 
