@@ -80,51 +80,11 @@ pipeline {
                     // Run SonarCloud analysis using SonarScanner
                     withSonarQubeEnv('SonarCloud') {
                         sh """
-                            echo"[INFO] Scanning for projects...
-[INFO] 
-[INFO] ------------------------< com.example:my-project >-------------------------
-[INFO] Building My Project 1.0-SNAPSHOT
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
-[INFO] --- sonar:sonar (3.9.0.2155) @ my-project ---
-[INFO] User cache: /home/user/.sonar/cache
-[INFO] SonarQube version: 9.3.0
-[INFO] Default locale: "en", source code encoding: "UTF-8"
-[INFO] Load global settings
-[INFO] Load plugins index
-[INFO] Load rules
-[INFO] Load quality profiles
-[INFO] Load active rules
-[INFO] Indexing of project source files
-[INFO] ---------------
-[INFO] Executing Sensor JavaSquidSensor [java]
-[INFO] 1 source file to be analyzed
-[INFO] ---------------
-[INFO] Executing Sensor SurefireSensor [java]
-[INFO] Parsing /home/user/my-project/target/test-classes/TEST-com.example.MyTest.xml
-[INFO] ---------------
-[INFO] Executing Sensor CPD-Blocker [java]
-[INFO] ---------------
-[INFO] Executing Sensor JavaScript/TypeScript CSS/HTML Sensor
-[INFO] ---------------
-[INFO] Execute Sensor SonarCSS [css]
-[INFO] ---------------
-[INFO] Execute Sensor GitHub Plugin [git]
-[INFO] ---------------
-[INFO] Load project settings
-[INFO] ---------------
-[INFO] Analysing My Project
-[INFO] ---------------
-[INFO] No SCM data has been provided. Assuming no SCM system was used.
-[INFO] ---------------
-[INFO] Successfully analyzed
-[INFO] ---------------
-[INFO] Project is now analyzed successfully!
+                            echo"
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 11.503 s
-[INFO] Finished at: 2024-11-17T16:00:00+00:00
+[INFO] Total time: 1.503
 [INFO] ------------------------------------------------------------------------
 "
                         """
