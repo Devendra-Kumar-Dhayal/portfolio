@@ -1,2 +1,2 @@
 basic readme
-need v1.1
+need v1.12
